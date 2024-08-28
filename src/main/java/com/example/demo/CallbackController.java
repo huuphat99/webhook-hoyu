@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/gmo-callback")
 public class CallbackController {
 
-    @PostMapping("/payment-status")
+    @PostMapping("/callback")
     public ResponseEntity<String> receivePaymentStatus(@RequestBody Map<String, String> payload) {
         System.out.println("---------------------");
         System.out.println(payload);

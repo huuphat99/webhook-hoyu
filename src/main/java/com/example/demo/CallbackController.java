@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
@@ -12,7 +13,7 @@ import java.util.Map;
 public class CallbackController {
 
     @PostMapping("/callback")
-    public ResponseEntity<String> receivePaymentStatus(@RequestBody Map<String, String> payload) {
+    public ResponseEntity<String> receivePaymentStatus(@RequestParam Map<String, String> payload) {
         System.out.println("---------------------");
         System.out.println(payload);
         System.out.println("---------------------");
